@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My IoT Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            text-align: center;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* เพิ่ม Wrapper เพื่อให้กล่องกราฟเรียงคู่กันสวยๆ */
+        .dashboard-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px; /* ระยะห่างระหว่างกล่อง */
+        }
+
+        .dashboard-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📊 ระบบมอนิเตอร์ข้อมูล IoT</h1>
+    
+    <div class="dashboard-wrapper">
+        
+        <!-- กล่องที่ 1: กราฟ Sensor 1 -->
+        <div class="dashboard-container">
+            <h3 style="color: #555; margin-top: 0;">กราฟแสดงค่า Sensor 1</h3>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/3434328/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+
+        <!-- กล่องที่ 2: กราฟ Sensor 2 -->
+        <div class="dashboard-container">
+            <h3 style="color: #555; margin-top: 0;">กราฟแสดงค่า Sensor 2</h3>
+            <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/3434328/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
